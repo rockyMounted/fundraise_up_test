@@ -1,0 +1,11 @@
+.main_section {
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 56px;
+
+  &-left {
+    max-width: 936px;
+    width: 100%;
+    margin-right: 24px;
+  }
+}

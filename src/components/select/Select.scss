@@ -1,0 +1,28 @@
+@import '../../variables';
+
+.select_field {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 116px;
+
+  select {
+    width: 100%;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+    padding-right: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.header {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid $gray-dark;
+  box-shadow: $shadow;
+  overflow: hidden;
+
+  &_title {
+    padding: 28px 32px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &_navigation {
+    padding: 16px 32px;
+    border-top: 1px solid $gray-dark;
+    background-color: $gray-light;
+    display: flex;
+    align-items: center;
+  }
+
+  .select-header {
+    margin-left: 40px;
+  }
+}

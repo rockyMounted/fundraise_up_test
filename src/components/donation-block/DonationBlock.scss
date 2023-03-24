@@ -1,0 +1,131 @@
+@import '../../variables.scss';
+
+.donation {
+  &_block {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid $gray-dark;
+    box-shadow: $shadow;
+    overflow: hidden;
+
+    .info_block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-info {
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+
+    .info_block {
+      .title,
+      .value > span {
+        font-family: 'Source Code Pro', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .title {
+        color: #919293;
+        margin-bottom: 4px;
+      }
+
+      .value {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  &_sum {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+
+      & > span {
+        margin-left: 8px;
+      }
+    }
+
+    &-value {
+      display: flex;
+      align-items: baseline;
+
+      .default {
+        color: $green;
+        font-size: 24px;
+        line-height: 32px;
+        margin-right: 9px;
+      }
+
+      .convert {
+        font-size: 16px;
+        line-height: 24px;
+        color: #6C6D6F
+      }
+    }
+  }
+
+  &-status-info {
+    background-color: $gray-light;
+    border-top: 1px solid $gray-dark;
+    padding: 16px 32px;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li + li {
+        position: relative;
+        border-left: 1px solid #D7D8DA;
+        padding-left: 32px;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        padding-right: 32px;
+
+        &:first-child {
+          padding-right: 13px;
+        }
+
+        .item-name {
+          color: #6C6D6F;
+          margin-bottom: 2px;
+        }
+
+        .item-info {
+          font-size: 16px;
+          line-height: 24px;
+          color: #6665DD;
+          text-decoration: underline;
+
+          &.status {
+            color: $green;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            svg {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
