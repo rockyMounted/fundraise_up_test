@@ -1,21 +1,46 @@
 @import '../../variables.scss';
 
 .button {
-  padding: 12px 24px;
+  padding: 11px 23px;
   font-size: 16px;
   line-height: 24px;
-  cursor: pointer;
+  border: 1px solid transparent;
+  transition: ease .3s;
+  outline: none;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 
   &.primary {
     color: $white;
     background-color: $green-main;
     border-radius: 6px;
-    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $green;
+    }
+
+    &:disabled {
+      background-color: $green-light;
+    }
   }
 
   &.secondary {
     border-radius: 8px;
     border: 1px solid #A9ABAE;
     background-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $gray;
+    }
+
+    &:disabled {
+      background-color: $white;
+      border: 1px solid #e1e1e2;
+      color: #A9ABAE;
+    }
   }
 }

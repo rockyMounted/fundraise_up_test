@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import Input from '../input';
+import Select from '../select';
 import Button from '../button';
+import RadioButton from "../radio-button";
+import Checkbox from "../checkbox";
+import Range from "../range";
 import './TabsBlock.scss';
 
 const TABS = {
@@ -37,13 +42,88 @@ const TabsBlock = () => {
     }
   ]
 
+  const designationFieldOptions = [
+    {
+      value: 1,
+      title: 'Match Checkout Setting'
+    },
+    {
+      value: 2,
+      title: 'Some option name'
+    },
+    {
+      value: 3,
+      title: 'Third option'
+    }
+  ]
+
+  const currencyFieldOptions = [
+    {
+      value: 1,
+      title: 'USD'
+    },
+    {
+      value: 2,
+      title: 'EUR'
+    },
+    {
+      value: 3,
+      title: 'RUB'
+    }
+  ]
+
+  const behaviorForm = () => (
+    <form className="form-behavior">
+      <Select
+        appearance="primary"
+        label="Designation"
+        options={designationFieldOptions}
+        className="select-item"
+        disabled
+      />
+      <fieldset className="goal-fields">
+        <Input label="Goal" className="goal-input" disabled />
+        <Select appearance="primary" options={currencyFieldOptions} className="currency-select" disabled />
+      </fieldset>
+      <fieldset className="radio-group">
+        <span>Default Amount</span>
+        <div>
+          <RadioButton label="Match Checkout Setting" id="match" disabled />
+          <RadioButton label="Customize" id="customize"/>
+        </div>
+      </fieldset>
+      <Checkbox
+        label="Allow donor to change default currency"
+        id='currencyAllow'
+        className='checkbox-item'
+        disabled
+      />
+      <fieldset className="range-group">
+        <Range
+          label="Border size"
+          id="size"
+          max="5"
+          min="0"
+          outputLabel="px"
+          withOutput
+          className="range-item"
+          disabled
+          defaultValue="3"
+        />
+        <Range
+          label="Border radius" id="radius" max="30" min="0" outputLabel="px" withOutput />
+      </fieldset>
+    </form>
+  )
+
   return (
     <div className="tabs-block">
       <nav>
         <ul>
           {tabList.map(({id, title}) => (
-            <li key={id} className={classNames({ 'active': id === activeTab })}>
+            <li key={id}>
               <button
+                className={classNames({ 'active': id === activeTab })}
                 onClick={() => setActiveTab(id)}
               >
                 {title}
@@ -53,11 +133,11 @@ const TabsBlock = () => {
         </ul>
       </nav>
       <div className="content">
-        hello
+        {behaviorForm()}
       </div>
       <div className="buttons">
-        <Button label='Save changes' appearance='primary' />
-        <Button label='Cancel' appearance='secondary'/>
+        <Button label='Save changes' appearance='primary' type='submit' />
+        <Button label='Cancel' appearance='secondary' />
       </div>
     </div>
   )

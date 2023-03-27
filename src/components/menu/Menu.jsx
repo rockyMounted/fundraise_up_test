@@ -1,8 +1,9 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Calendar, Repeat, Wallet, Cancel } from "../../icons";
 import './Menu.scss';
 
-const Menu = () => {
+const Menu = ({ className }) => {
   const menuItems = [
     {
       icon: <Repeat />,
@@ -27,7 +28,7 @@ const Menu = () => {
   ];
 
   return (
-    <div className='menu_wrapper'>
+    <div className={classNames('menu_wrapper', className)}>
       <ul>
         {menuItems.map(({ icon, title, onClick }) => (
           <li>

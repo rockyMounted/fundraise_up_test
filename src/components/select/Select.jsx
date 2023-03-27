@@ -3,15 +3,18 @@ import classNames from 'classnames';
 import { ArrowIcon } from './ArrowIcon';
 import './Select.scss';
 
-const Select = ({ options, className }) => {
+const Select = ({ options, className, appearance, label, name, disabled }) => {
   return (
-    <div className={classNames('select_field', className)}>
-      <select>
-        <option value="all">All statuses</option>
-        <option value="1">First status</option>
-        <option value="1">Second status</option>
-      </select>
-      <span className='icon'><ArrowIcon /></span>
+    <div className={classNames('select_field', appearance, className)}>
+      {label && <label htmlFor={name}>{label}</label>}
+      <div className='select'>
+        <select id={name} disabled={disabled}>
+          {options.map(({value, title}) => (
+            <option key={value} value={value}>{title}</option>
+          ))}
+        </select>
+        <ArrowIcon />
+      </div>
     </div>
   )
 }

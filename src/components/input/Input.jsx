@@ -1,12 +1,16 @@
 import React from 'react';
+import classNames from 'classnames';
 import { SearchIcon } from './SearchIcon';
 import './Input.scss';
 
-const Input = ({type = 'search', name = 'input', placeholder = 'Search'}) => {
+const Input = ({ type = 'text', name, placeholder, label, className, disabled }) => {
   return (
-    <div className='input_field'>
-      {type === 'search' && <span className='icon'><SearchIcon /></span>}
-      <input type={type} id={name} placeholder={placeholder} />
+    <div className={classNames('input_field', className)}>
+      {label && <label htmlFor={name}>{label}</label>}
+      <div className="input">
+        {type === 'search' && <SearchIcon />}
+        <input type={type} id={name} placeholder={placeholder} disabled={disabled} />
+      </div>
     </div>
   )
 }

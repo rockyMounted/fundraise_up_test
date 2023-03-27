@@ -33,18 +33,18 @@ const DonationBlock = ({ className }) => {
         <ul>
           <li>
             <span className="item-name">Status</span>
-            <span className="item-info status">
+            <span className="status">
               <Success />
               <span>Succeeded</span>
             </span>
           </li>
           <li>
             <span className="item-name">Supporter</span>
-            <span className="item-info">Charlotte Ann</span>
+            <a href="#" target="_blank">Charlotte Ann</a>
           </li>
           <li>
             <span className="item-name">Campaign</span>
-            <span className="item-info">Heart walk</span>
+            <a href="#" target="_blank">Heart walk</a>
           </li>
         </ul>
       </div>

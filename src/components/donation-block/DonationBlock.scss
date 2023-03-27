@@ -15,7 +15,7 @@
   }
 
   &-info {
-    padding: 24px 32px;
+    padding: 23px 32px 24px 32px;
     display: flex;
     justify-content: space-between;
 
@@ -31,7 +31,6 @@
 
       .title {
         color: #919293;
-        margin-bottom: 4px;
       }
 
       .value {
@@ -82,7 +81,7 @@
   &-status-info {
     background-color: $gray-light;
     border-top: 1px solid $gray-dark;
-    padding: 16px 32px;
+    padding: 15px 32px;
 
     ul {
       display: flex;
@@ -108,21 +107,23 @@
           margin-bottom: 2px;
         }
 
-        .item-info {
+        .status {
+          color: $green;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 8px;
+          }
+        }
+
+        a {
           font-size: 16px;
           line-height: 24px;
           color: #6665DD;
-          text-decoration: underline;
 
-          &.status {
-            color: $green;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-
-            svg {
-              margin-right: 8px;
-            }
+          &:visited {
+            color: #8a88d8;
           }
         }
       }

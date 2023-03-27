@@ -13,7 +13,7 @@ const Main = () => {
         <TabsBlock />
       </div>
       <aside>
-        <Menu />
+        <Menu className="menu-sticky"/>
       </aside>
     </section>
   )
