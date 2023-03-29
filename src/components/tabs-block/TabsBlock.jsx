@@ -79,16 +79,15 @@ const TabsBlock = () => {
         label="Designation"
         options={designationFieldOptions}
         className="select-item"
-        disabled
       />
       <fieldset className="goal-fields">
-        <Input label="Goal" className="goal-input" disabled />
-        <Select appearance="primary" options={currencyFieldOptions} className="currency-select" disabled />
+        <Input label="Goal" className="goal-input" />
+        <Select appearance="primary" options={currencyFieldOptions} className="currency-select" />
       </fieldset>
       <fieldset className="radio-group">
         <span>Default Amount</span>
         <div>
-          <RadioButton label="Match Checkout Setting" id="match" disabled />
+          <RadioButton label="Match Checkout Setting" id="match" />
           <RadioButton label="Customize" id="customize"/>
         </div>
       </fieldset>
@@ -96,7 +95,6 @@ const TabsBlock = () => {
         label="Allow donor to change default currency"
         id='currencyAllow'
         className='checkbox-item'
-        disabled
       />
       <fieldset className="range-group">
         <Range
@@ -107,11 +105,17 @@ const TabsBlock = () => {
           outputLabel="px"
           withOutput
           className="range-item"
-          disabled
           defaultValue="3"
         />
         <Range
-          label="Border radius" id="radius" max="30" min="0" outputLabel="px" withOutput />
+          label="Border radius"
+          id="radius"
+          max="30"
+          min="0"
+          outputLabel="px"
+          withOutput
+          className="range-item"
+        />
       </fieldset>
     </form>
   )

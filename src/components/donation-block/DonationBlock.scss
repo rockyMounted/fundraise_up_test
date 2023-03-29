@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../mixins.scss';
 
 .donation {
   &_block {
@@ -7,11 +8,6 @@
     border: 1px solid $gray-dark;
     box-shadow: $shadow;
     overflow: hidden;
-
-    .info_block {
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   &-info {
@@ -19,7 +15,18 @@
     display: flex;
     justify-content: space-between;
 
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
     .info_block {
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        flex-direction: row;
+      }
+
       .title,
       .value > span {
         font-family: 'Source Code Pro', sans-serif;
@@ -31,6 +38,10 @@
 
       .title {
         color: #919293;
+
+        @include mobile {
+          margin-right: 12px;
+        }
       }
 
       .value {
@@ -48,6 +59,10 @@
   &_sum {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
 
     .title {
       display: flex;
@@ -87,10 +102,22 @@
       display: flex;
       list-style-type: none;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       li + li {
         position: relative;
         border-left: 1px solid #D7D8DA;
         padding-left: 32px;
+
+        @include mobile {
+          padding-left: 0;
+          margin-top: 12px;
+          padding-top: 12px;
+          border-left: none;
+          border-top: 1px solid #D7D8DA;
+        }
       }
 
       li {
@@ -100,6 +127,10 @@
 
         &:first-child {
           padding-right: 13px;
+
+          @include mobile {
+            padding-right: 0;
+          }
         }
 
         .item-name {

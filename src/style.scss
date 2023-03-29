@@ -1,27 +1,38 @@
 @import './variables.scss';
+@import './mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans:wght@300;400;600&display=swap');
 
-
 *, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body,
 input,
 select,
 button {
-    font-family: 'Work Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: $black-main
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black-main
 }
 
 .container {
-    margin: 53px auto;
-    width: 1224px;
+  margin: 53px auto;
+  width: 1224px;
+
+  @include tablet {
+    margin: 32px auto;
+    padding: 0 24px;
+  }
+
+  @include mobile {
+    margin: 24px auto;
+    padding: 0 18px;
+    width: 100%;
+  }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './Checkbox.scss';
 
-const Checkbox = ({ name, label, className, id, disabled, checked = true }) => {
+const Checkbox = ({ name, label, className, id, disabled, checked }) => {
   return (
     <>
       <div className={classNames('checkbox_field', className)} >

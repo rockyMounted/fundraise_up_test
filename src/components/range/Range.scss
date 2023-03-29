@@ -16,10 +16,6 @@
     appearance: none;
     outline: transparent;
     transition: ease .3s;
-
-    &:not(:disabled) {
-      cursor: pointer;
-    }
   }
 
   input[type=range] {
@@ -27,6 +23,10 @@
     height: 3px;
     width: 218px;
     background-color: $gray-dark;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
   }
 
   input[type=range]::-webkit-slider-thumb {

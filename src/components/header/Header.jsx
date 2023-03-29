@@ -23,7 +23,7 @@ const Header = () => {
     <div className='header'>
       <h1 className='header_title'>Donations</h1>
       <nav className='header_navigation'>
-        <Input type="search" placeholder='Search' />
+        <Input type="search" placeholder='Search' className="header-input"/>
         <Select
           className='select-header'
           options={selectHeaderOptions}

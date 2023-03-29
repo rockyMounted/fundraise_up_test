@@ -18,20 +18,22 @@ const Range = (props) => {
     <>
       <div className={classNames('range_field', className)} >
         <label htmlFor={id}>{label}</label>
-        <input
-          disabled={disabled}
-          type="range"
-          id={id}
-          name={name}
-          max={max}
-          min={min}
-          value={value}
-          onChange={(event) => onChange(event.target.value)}
-          style={{
-            background: `linear-gradient(to right, ${fillRangeColor} 0%, ${fillRangeColor} ${fillValue}%, ${rangeColor} ${fillValue}%, ${rangeColor} 100%)`
-          }}
-        />
-        {withOutput && <span>{value}{outputLabel ? outputLabel : ''}</span>}
+        <div>
+          <input
+            disabled={disabled}
+            type="range"
+            id={id}
+            name={name}
+            max={max}
+            min={min}
+            value={value}
+            onChange={(event) => onChange(event.target.value)}
+            style={{
+              background: `linear-gradient(to right, ${fillRangeColor} 0%, ${fillRangeColor} ${fillValue}%, ${rangeColor} ${fillValue}%, ${rangeColor} 100%)`
+            }}
+          />
+          {withOutput && <span>{value}{outputLabel ? outputLabel : ''}</span>}
+        </div>
       </div>
     </>
   )
