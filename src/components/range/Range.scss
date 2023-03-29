@@ -32,23 +32,38 @@
     &:not(:disabled) {
       cursor: pointer;
     }
-  }
 
-  input[type=range]::-webkit-slider-thumb {
-    background-color: $green-main;
-    border-radius: 50%;
-    position: relative;
-    width: 19px;
-    height: 19px;
-    z-index: 1;
-  }
+    &::-webkit-slider-thumb {
+      background-color: $green-main;
+      border-radius: 50%;
+      width: 19px;
+      height: 19px;
+    }
 
-  input[type=range]:focus::-webkit-slider-thumb,
-  input[type=range]:not(:disabled):hover::-webkit-slider-thumb {
-    box-shadow: 0 0px 5px $green-main;
-  }
+    &::-moz-range-thumb {
+      border: none;
+      background-color: $green-main;
+      border-radius: 50%;
+      width: 19px;
+      height: 19px;
+    }
 
-  input[type=range]:disabled::-webkit-slider-thumb {
-    background-color: $gray-dark;
+    &:focus::-webkit-slider-thumb,
+    &:not(:disabled):hover::-webkit-slider-thumb {
+      box-shadow: 0 0px 5px $green-main;
+    }
+
+    &:disabled::-webkit-slider-thumb {
+      background-color: $gray-dark;
+    }
+
+    &:focus::-moz-range-thumb,
+    &:not(:disabled):hover::-moz-range-thumb {
+      box-shadow: 0 0px 5px $green-main;
+    }
+
+    &:disabled::-moz-range-thumb {
+      background-color: $gray-dark;
+    }
   }
 }

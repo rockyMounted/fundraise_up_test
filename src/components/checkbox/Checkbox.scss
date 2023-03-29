@@ -8,6 +8,7 @@
   input[type=checkbox] {
     appearance: none;
     position: absolute;
+    transition: ease .3s;
 
     &:not(:disabled) + label {
       cursor: pointer;
@@ -41,7 +42,6 @@
     background-color: $white;
     border: 1px solid #A9ABAE;
     border-radius: 4px;
-    transition: ease .3s;
   }
 
   input[type=checkbox]:checked + label::before {
