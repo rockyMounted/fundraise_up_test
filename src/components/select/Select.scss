@@ -30,18 +30,18 @@
     select {
       width: 296px;
       height: 40px;
-      border: 1px solid #A9ABAE;
+      border: $border-gray;
       border-radius: 6px;
       padding: 8px 28px 8px 12px;
       background-color: $white;
 
-      &:not(:disabled):hover {
-        box-shadow: 0 0px 2px #A9ABAE;
+      &:not(:disabled):not(:focus):hover {
+        box-shadow: $shadow-gray;
       }
 
       &:focus {
         border: 1px solid $green-main;
-        box-shadow: 0 0px 2px $green-main;
+        box-shadow: $shadow-green;
       }
 
       &:disabled {
@@ -62,7 +62,7 @@
       width: 116px;
       border: none;
 
-      &:not(:disabled):hover {
+      &:not(:disabled):not(:focus):hover {
         color: #A9ABAE;
       }
 

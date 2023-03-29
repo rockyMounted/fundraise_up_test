@@ -50,7 +50,8 @@
 
     &:focus::-webkit-slider-thumb,
     &:not(:disabled):hover::-webkit-slider-thumb {
-      box-shadow: 0 0px 5px $green-main;
+      box-shadow: $shadow-green;
+      background-color: $green;
     }
 
     &:disabled::-webkit-slider-thumb {
@@ -59,7 +60,8 @@
 
     &:focus::-moz-range-thumb,
     &:not(:disabled):hover::-moz-range-thumb {
-      box-shadow: 0 0px 5px $green-main;
+      box-shadow: $shadow-green;
+      background-color: $green;
     }
 
     &:disabled::-moz-range-thumb {

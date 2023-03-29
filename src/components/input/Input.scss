@@ -1,7 +1,6 @@
 @import '../../variables';
 
 .input_field {
-  // height: 40px;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -20,16 +19,16 @@
     width: 336px;
     height: 40px;
     padding: 8px 12px;
-    border: 1px solid #A9ABAE;
+    border: $border-gray;
     border-radius: 6px;
     font-size: 16px;
     line-height: 24px;
     transition: ease .3s;
     outline: none;
-    background-color: #FFFFFF;
+    background-color: $white;
 
-    &:hover:not(:disabled) {
-      box-shadow: 0 0px 2px #A9ABAE;
+    &:hover:not(:disabled):not(:focus) {
+      box-shadow: $shadow-gray;
     }
 
     &:disabled {
@@ -48,7 +47,7 @@
   input {
     &:focus {
       border: 1px solid $green-main;
-      box-shadow: 0 0px 2px $green-main;
+      box-shadow: $shadow-green;
     }
 
     &:disabled {
@@ -73,8 +72,8 @@
     border: 1px solid $gray-dark;
     border-radius: 8px;
 
-    &:hover {
-      box-shadow: 0 0px 2px $gray-dark;
+    &:not(:focus):hover {
+      box-shadow: 0 0px 5px $gray-dark;
     }
   }
 

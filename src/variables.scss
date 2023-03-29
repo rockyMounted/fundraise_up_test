@@ -10,6 +10,9 @@ $green-main: #2EB670;
 $green-light: #7ec4a0;
 
 $shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
+$shadow-green:0 0px 5px $green-main;
+$shadow-gray: 0 0px 5px #A9ABAE;
+$border-gray: 1px solid #A9ABAE;
 
 $desktop-width: 1024px;
 $tablet-width: 768px;

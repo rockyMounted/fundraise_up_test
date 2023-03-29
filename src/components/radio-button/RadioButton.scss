@@ -10,7 +10,6 @@
   input[type=radio] {
     appearance: none;
     opacity: 0;
-    transition: ease .3s;
 
     &:not(:disabled) + label {
       cursor: pointer;
@@ -31,13 +30,18 @@
     + label {
       position: relative;
 
+      &::before,
+      &::after {
+        transition: ease .3s;
+      }
+
       &::before {
         content: '';
         position: absolute;
         left: -36px;
         top: 0;
         border-radius: 50%;
-        border: 1px solid #A9ABAE;
+        border: $border-gray;
         width: 24px;
         height: 24px;
       }
@@ -63,14 +67,14 @@
 
     &:focus:not(:disabled) {
       + label::before {
-        box-shadow: 0 0px 2px $green-main;
+        box-shadow: $shadow-green;
         border: 2px solid $green-main;
       }
     }
 
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled):not(:focus) {
       + label::before {
-        box-shadow: 0 0px 2px #A9ABAE;
+        box-shadow: $shadow-gray;
       }
     }
   }
