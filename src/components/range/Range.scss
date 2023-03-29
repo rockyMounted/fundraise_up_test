@@ -6,6 +6,11 @@
   display: flex;
   align-items: center;
 
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
   label, input {
     margin-right: 16px;
   }

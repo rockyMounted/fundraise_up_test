@@ -31,7 +31,7 @@ const Menu = ({ className }) => {
     <div className={classNames('menu_wrapper', className)}>
       <ul>
         {menuItems.map(({ icon, title, onClick }) => (
-          <li>
+          <li key={title}>
             <button onClick={() => onClick()}>
               {icon}
               <span className="title">{title}</span>

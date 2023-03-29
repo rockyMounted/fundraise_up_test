@@ -87,8 +87,8 @@ const TabsBlock = () => {
       <fieldset className="radio-group">
         <span>Default Amount</span>
         <div>
-          <RadioButton label="Match Checkout Setting" id="match" />
-          <RadioButton label="Customize" id="customize"/>
+          <RadioButton label="Match Checkout Setting" id="match" name="formRadioGroup" />
+          <RadioButton label="Customize" id="customize" name="formRadioGroup" />
         </div>
       </fieldset>
       <Checkbox
@@ -104,7 +104,7 @@ const TabsBlock = () => {
           min="0"
           outputLabel="px"
           withOutput
-          className="range-item"
+          className="range-item range-border"
           defaultValue="3"
         />
         <Range
