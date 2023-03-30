@@ -17,4 +17,4 @@ Build the project with npm:
 ```
 
 ## 🔗 Links
-[demo](https://www.linkedin.com/in/daria-kazeko-8835301b7/)
+[demo](https://rockymounted.github.io/fundraise_up_test/)
