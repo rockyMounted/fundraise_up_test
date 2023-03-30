@@ -23,7 +23,8 @@ button {
 
 .container {
   margin: 53px auto;
-  width: 1272px;
+  max-width: 1272px;
+  width: 100%;
   padding: 0 24px;
 
   @include tablet {
@@ -33,6 +34,5 @@ button {
   @include mobile {
     margin: 24px auto;
     padding: 0 18px;
-    width: 100%;
   }
 }

@@ -5,12 +5,8 @@
   border: 1px solid $gray-dark;
   border-radius: 8px;
   overflow: hidden;
-  width: 264px;
+  width: 100%;
   box-shadow: $shadow;
-
-  @include mobile {
-    width: 100%;
-  }
 
   ul {
     li + li {
