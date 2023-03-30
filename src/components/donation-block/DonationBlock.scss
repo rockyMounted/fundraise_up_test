@@ -17,6 +17,8 @@
 
     @include mobile {
       flex-wrap: wrap;
+      padding-right: 24px;
+      padding-left: 24px;
     }
 
     .info_block {
@@ -25,6 +27,7 @@
 
       @include mobile {
         flex-direction: row;
+        align-items: center;
       }
 
       .title,
@@ -47,7 +50,7 @@
       .value {
         display: flex;
         align-items: center;
-        cursor: pointer;
+        background-color: transparent;
 
         span {
           margin-right: 8px;
@@ -97,6 +100,12 @@
     background-color: $gray-light;
     border-top: 1px solid $gray-dark;
     padding: 15px 32px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
 
     ul {
       display: flex;

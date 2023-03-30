@@ -1,7 +1,7 @@
-import React from "react";
-import DonationBlock from "../donation-block";
-import Menu from "../menu";
-import TabsBlock from "../tabs-block"
+import React from 'react';
+import DonationBlock from '../donation-block';
+import Menu from '../menu';
+import TabsBlock from '../tabs-block';
 import './Main.scss';
 
 const Main = () => {

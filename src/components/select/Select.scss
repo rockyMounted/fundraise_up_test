@@ -1,4 +1,5 @@
 @import '../../variables';
+@import '../../mixins.scss';
 
 .select_field {
   display: flex;
@@ -8,6 +9,10 @@
 
   .select {
     position: relative;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   select {
@@ -34,6 +39,10 @@
       border-radius: 6px;
       padding: 8px 28px 8px 12px;
       background-color: $white;
+
+      @include mobile {
+        width: 100%;
+      }
 
       &:not(:disabled):not(:focus):hover {
         box-shadow: $shadow-gray;

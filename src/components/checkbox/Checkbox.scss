@@ -4,7 +4,7 @@
 .checkbox_field {
   font-size: 16px;
   line-height: 24px;
-  width: max-content;
+  width: fit-content;
 
   input[type=checkbox] {
     appearance: none;
@@ -13,76 +13,76 @@
     &:not(:disabled) + label {
       cursor: pointer;
     }
-  }
 
-  input[type=checkbox] + label {
-    position: relative;
-    display: flex;
-    align-items: center;
+    & + label {
+      position: relative;
+      display: flex;
+      align-items: center;
 
-    @include mobile {
-      align-items: flex-start;
+      @include mobile {
+        align-items: flex-start;
+      }
     }
-  }
 
-  input[type=checkbox] + label::before,
-  input[type=checkbox] + label::after {
-    transition: ease .3s;
+    & + label::before,
+    & + label::after {
+      transition: ease .3s;
 
-    @include mobile {
-      margin-top: 4px;
+      @include mobile {
+        margin-top: 4px;
+      }
     }
-  }
 
-  input[type=checkbox] + label::before {
-    content: '';
-    position: relative;
-    display: inline-block;
-    margin-right: 12px;
-    width: 24px;
-    height: 24px;
-    background-color: $white;
-    border: $border-gray;
-    border-radius: 4px;
-  }
+    & + label::before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      margin-right: 12px;
+      min-width: 24px;
+      min-height: 24px;
+      background-color: $white;
+      border: $border-gray;
+      border-radius: 4px;
+    }
 
-  input[type=checkbox]:checked + label::before {
-    border: 2px solid $green-main;
-  }
+    &:checked + label::before {
+      border: 2px solid $green-main;
+    }
 
-  input[type=checkbox]:checked + label::after {
-    content: '';
-    position: absolute;
-    top: 7px;
-    left: 5px;
-    border-left: 2px solid $green-main;
-    border-bottom: 2px solid $green-main;
-    height: 6px;
-    width: 14px;
-    transform: rotate(-45deg);
-    border-radius: 1px;
-  }
+    &:checked + label::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 5px;
+      border-left: 2px solid $green-main;
+      border-bottom: 2px solid $green-main;
+      height: 6px;
+      width: 14px;
+      transform: rotate(-45deg);
+      border-radius: 1px;
+    }
 
-  input[type=checkbox]:not(:disabled):focus + label::before {
-    border: 2px solid $green-main;
-    box-shadow: 0 0px 5px $green-main;
-  }
+    &:not(:disabled):focus + label::before {
+      border: 2px solid $green-main;
+      box-shadow: 0 0px 5px $green-main;
+    }
 
-  input[type=checkbox]:not(:checked):not(:disabled):hover + label::before {
-    box-shadow: $shadow-gray;
-  }
+    &:not(:checked):not(:disabled):hover + label::before {
+      box-shadow: $shadow-gray;
+    }
 
-  input[type=checkbox]:not(:disabled):checked:hover + label::before {
-    border: 2px solid $green-main;
-    box-shadow: 0 0px 5px $green-main;
-  }
+    &:not(:disabled):checked:hover + label::before {
+      border: 2px solid $green-main;
+      box-shadow: 0 0px 5px $green-main;
+    }
 
-  input[type=checkbox]:disabled + label::before,
-  input[type=checkbox]:disabled + label::after {
-    border-color: $gray-disabled;
-  }
+    &:disabled + label::before,
+    &:disabled + label::after {
+      border-color: $gray-disabled;
+    }
 
-  input[type=checkbox]:disabled + label {
-    color: $gray-dark;
+    &:disabled + label {
+      color: $gray-dark;
+    }
   }
 }

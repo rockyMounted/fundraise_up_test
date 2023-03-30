@@ -1,12 +1,10 @@
-import React from "react";
-import classNames from "classnames";
-import { Success, Dollar, Copy } from "../../icons";
-import './DonationBlock.scss'
+import React from 'react';
+import classNames from 'classnames';
+import { Success, Dollar, Copy } from '../../icons';
+import './DonationBlock.scss';
 
 const DonationBlock = ({ className }) => {
-  const onCopy = (value) => {
-    console.log(value)
-  }
+  const onCopy = () => { };
 
   return (
     <div className={classNames("donation_block", className)}>
@@ -23,10 +21,10 @@ const DonationBlock = ({ className }) => {
         </div>
         <div className="info_block">
           <span className="title">ID</span>
-          <div className="value" onClick={() => onCopy()}>
+          <button className="value" onClick={() => onCopy()}>
             <span>TYNY694Y</span>
             <Copy />
-          </div>
+          </button>
         </div>
       </div>
       <div className="donation-status-info">

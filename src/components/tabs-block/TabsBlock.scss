@@ -1,10 +1,6 @@
 @import '../../variables.scss';
 @import '../../mixins.scss';
 
-fieldset {
-  border: none;
-}
-
 .tabs-block {
   border: 1px solid $gray-dark;
   border-radius: 8px;
@@ -21,6 +17,7 @@ fieldset {
       display: flex;
       height: 46px;
       overflow-x: scroll;
+      margin-bottom: -1px;
 
       button {
         height: auto;
@@ -45,26 +42,19 @@ fieldset {
 
       button.active{
         border: 1px solid $gray-dark;
-        border-bottom: none;
         border-radius: 6px 6px 0px 0px;
         position: relative;
         color: $green;
-
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          right: 0;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background-color: $white;
-        }
+        border-bottom: 1px solid $white;
       }
     }
   }
 
   .form-behavior {
+    fieldset {
+      border: none;
+    }
+
     .goal-fields {
       display: flex;
       align-items: center;
@@ -95,7 +85,7 @@ fieldset {
       }
 
       .currency-select select {
-        max-width: 80px;
+        width: 80px;
       }
     }
 

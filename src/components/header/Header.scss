@@ -24,6 +24,13 @@
     flex-wrap: wrap;
   }
 
+  &_navigation,
+  &_title {
+    @include mobile {
+      padding: 18px 24px;
+    }
+  }
+
   .select-header {
     margin-left: 40px;
 

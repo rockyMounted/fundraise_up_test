@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import classNames from "classnames";
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import Input from '../input';
 import Select from '../select';
 import Button from '../button';
-import RadioButton from "../radio-button";
-import Checkbox from "../checkbox";
-import Range from "../range";
+import RadioButton from '../radio-button';
+import Checkbox from '../checkbox';
+import Range from '../range';
 import './TabsBlock.scss';
 
 const TABS = {
@@ -73,28 +73,45 @@ const TabsBlock = () => {
   ]
 
   const behaviorForm = () => (
-    <form className="form-behavior">
+    <form className="form-behavior" method="post">
       <Select
         appearance="primary"
         label="Designation"
         options={designationFieldOptions}
         className="select-item"
+        onChange={() => { }}
       />
       <fieldset className="goal-fields">
-        <Input label="Goal" className="goal-input" />
-        <Select appearance="primary" options={currencyFieldOptions} className="currency-select" />
+        <Input label="Goal" className="goal-input" onChange={() => { }}/>
+        <Select
+          appearance="primary"
+          options={currencyFieldOptions}
+          className="currency-select"
+          onChange={() => { }}
+        />
       </fieldset>
       <fieldset className="radio-group">
         <span>Default Amount</span>
         <div>
-          <RadioButton label="Match Checkout Setting" id="match" name="formRadioGroup" />
-          <RadioButton label="Customize" id="customize" name="formRadioGroup" />
+          <RadioButton
+            label="Match Checkout Setting"
+            id="match"
+            name="formRadioGroup"
+            onChange={() => { }}
+          />
+          <RadioButton
+            label="Customize"
+            id="customize"
+            name="formRadioGroup"
+            onChange={() => { }}
+          />
         </div>
       </fieldset>
       <Checkbox
         label="Allow donor to change default currency"
-        id='currencyAllow'
-        className='checkbox-item'
+        id="currencyAllow"
+        className="checkbox-item"
+        onChange={() => {}}
       />
       <fieldset className="range-group">
         <Range
@@ -106,6 +123,7 @@ const TabsBlock = () => {
           withOutput
           className="range-item range-border"
           defaultValue="3"
+          onChange={() => {}}
         />
         <Range
           label="Border radius"
@@ -115,6 +133,7 @@ const TabsBlock = () => {
           outputLabel="px"
           withOutput
           className="range-item"
+          onChange={() => {}}
         />
       </fieldset>
     </form>
@@ -127,7 +146,7 @@ const TabsBlock = () => {
           {tabList.map(({id, title}) => (
             <li key={id}>
               <button
-                className={classNames({ 'active': id === activeTab })}
+                className={classNames({ "active": id === activeTab })}
                 onClick={() => setActiveTab(id)}
               >
                 {title}
@@ -140,8 +159,8 @@ const TabsBlock = () => {
         {behaviorForm()}
       </div>
       <div className="buttons">
-        <Button label='Save changes' appearance='primary' type='submit' />
-        <Button label='Cancel' appearance='secondary' />
+        <Button label="Save changes" appearance="primary" type="submit" />
+        <Button label="Cancel" appearance="secondary" />
       </div>
     </div>
   )
