@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/rockyMounted/fundraise_up_test/issues"
   },
-  "homepage": "https://github.com/rockyMounted/fundraise_up_test#readme",
+  "homepage": "https://github.com/rockyMounted/fundraise_up_test",
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
